@@ -1,6 +1,8 @@
 FROM amazoncorretto:17
 
-RUN apk add --update --no-cache wget unzip curl bash jq
+RUN yum install -y wget unzip curl bash jq \
+  && yum clean all \
+  && rm -rf /var/cache/yum
 RUN mkdir -p /opt
 
 RUN cd /opt \
