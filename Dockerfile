@@ -1,4 +1,4 @@
-FROM openjdk:17-alpine
+FROM amazoncorretto:17
 
 RUN apk add --update --no-cache wget unzip curl bash jq
 RUN mkdir -p /opt
